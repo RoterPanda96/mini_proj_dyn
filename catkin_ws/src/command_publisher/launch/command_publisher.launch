@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find command_publisher)/param/velocity_parameters.yaml" />
+  <node name="command_publisher" pkg="command_publisher" type="command_publisher_node" output="screen" />
+</launch>
