@@ -35,3 +35,15 @@ roslaunch command_publisher command_publisher.launch
 source devel/setup.bash
 roslaunch jackal_viz view_robot.launch
 ```
+4-   Start rqt to dynamically configure the parameters: open a new terminal `#4` in any directory and run
+```
+rosrun rqt_reconfigure rqt_reconfigure
+```
+5- Check odom: open a new terminal `#5` in any directory and run
+```
+rostopic echo /jackal_velocity_controller/odom --noarr
+```
+6- Check command publish rate: open a new terminal `#6` in any directory and run
+```
+rostopic hz /cmd_vel
+```
